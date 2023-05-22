@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'login_page.dart';
 
 
@@ -26,7 +27,7 @@ class _ForgotState extends State<Forgot> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: ima,
+      backgroundColor: Colors.purple.shade50,
       appBar: AppBar(
         //-------------------------back button---------------------------
         leading: Padding(
@@ -36,26 +37,22 @@ class _ForgotState extends State<Forgot> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => LoginPage()));
             },
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         elevation: 0,
-        backgroundColor: Color.fromARGB(255, 34, 34, 34),
+        backgroundColor: Colors.purple.shade50,
       ),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/background.png"),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Add other widgets here
+            Padding(
+              padding: const EdgeInsets.only(top: 28.0, left: 20),
+              child: Text("Forgot Password?", style: GoogleFonts.fredoka(color: Colors.black, fontSize: 40),),
+            )
           ],
         ),
-      ),
+      )
     );
   }
 }

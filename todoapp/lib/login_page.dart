@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:todoapp/first_page.dart';
+import 'package:todoapp/main.dart';
 import 'forgot_pw.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -180,7 +182,7 @@ class _LoginState extends State<Login> {
                     //--------------------------Login button-----------------------
                     Center(
                       child: InkWell(
-                        // onTap: openLoginPage,//
+                        onTap: openHomePage,//
                         child: Container(
                           padding: EdgeInsets.symmetric(
                               vertical: 20, horizontal: 70),
@@ -193,7 +195,7 @@ class _LoginState extends State<Login> {
                                     blurRadius: 8,
                                     spreadRadius:-3),
                                 BoxShadow(
-                                    color: Colors.grey.shade700,
+                                    color: Colors.grey.shade600,
                                     offset: Offset(-2, -4),
                                     blurRadius: 10,
                                     spreadRadius: -7)
@@ -228,5 +230,11 @@ class _LoginState extends State<Login> {
   void openForgetpwPage() {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => ForgotPage()));
+  }
+  
+  void openHomePage()
+  {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => homePage()));
   }
 }
