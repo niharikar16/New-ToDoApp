@@ -47,9 +47,9 @@ class _FirstState extends State<First> {
               child: Center(
                 child: Text(
                   "Lets Begin!",
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.fredoka(
                       fontSize: 50,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.normal,
                       color: Colors.black87),
                 ),
               ),
@@ -89,24 +89,33 @@ class _FirstState extends State<First> {
               height: 20,
             ),
 
-            //------------to navigate button to next page----------
+            //---------------------Get started------------------------
             InkWell(
               onTap: openLoginPage,
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 70),
-                decoration: BoxDecoration(color: Colors.black, boxShadow: [
+                decoration: BoxDecoration(color: Colors.white30,
+                  boxShadow: [
                   BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      offset: Offset(0, 9),
-                      blurRadius: 10,
-                      spreadRadius: 3),
-                ]),
+                      color: Colors.grey.shade400,
+                      offset: Offset(4, 8),
+                      blurRadius: 8,
+                      spreadRadius: 1),
+                    BoxShadow(
+                      color: Colors.grey.shade50,
+                      blurRadius: 6,
+                      offset: Offset(-3, -6),
+                      spreadRadius: 1
+                    )
+                ], borderRadius: BorderRadius.circular(60),
+
+                ),
                 child: Text(
                   "Get Started!",
                   style: GoogleFonts.montserrat(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                      color: Colors.black),
                 ),
               ),
             ),
@@ -172,8 +181,8 @@ class _FirstState extends State<First> {
           padding: const EdgeInsets.only(top: 20),
           child: Text(
             img.content,
-            style: GoogleFonts.montserrat(
-                color: Colors.grey, fontSize: 20, fontWeight: FontWeight.bold),
+            style: GoogleFonts.fredoka(
+                color: Colors.grey, fontSize: 20, fontWeight: FontWeight.normal),
           ),
         ),
       ],
