@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color.fromARGB(255, 34, 34, 34),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         //-------------------------back button---------------------------
         leading: Padding(
@@ -40,11 +40,11 @@ class _LoginState extends State<Login> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => FirstPage()));
             },
-            color: Colors.white,
+            color: Color(0xff283048),
           ),
         ),
         elevation: 0,
-        backgroundColor: Color.fromARGB(255, 34, 34, 34),
+        backgroundColor: Colors.white,
       ),
 
       //-----------------------------body--------------------------------------
@@ -60,7 +60,7 @@ class _LoginState extends State<Login> {
               child: Icon(
                 Icons.account_circle,
                 size: 150,
-                color: Colors.white,
+                color: Color(0xff283048),
               ),
             ),
 
@@ -76,7 +76,7 @@ class _LoginState extends State<Login> {
                 style: GoogleFonts.fredoka(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                    color: Color(0xff283048)),
               ),
             ),
             Padding(
@@ -90,25 +90,25 @@ class _LoginState extends State<Login> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 20.0,
             ),
 
             //----------------------Design container--------------------------
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade800,
+                  color: Colors.white,
                   boxShadow: [
                     BoxShadow(
                         color: Colors.black54,
-                        offset: const Offset(0, 0),
-                        blurRadius: 15,
-                        spreadRadius: 1),
+                        // offset: const Offset(0, 0),
+                        // blurRadius: 15,
+                        ),
                   ],
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(50),
-                    topRight: Radius.circular(50),
-                  ),
+                  // borderRadius: BorderRadius.only(
+                  //   topLeft: Radius.circular(0),
+                  //   topRight: Radius.circular(50),
+                  // ),
                 ),
 
                 //------------------------password and email field ------------------
@@ -121,7 +121,7 @@ class _LoginState extends State<Login> {
                         // controller: _emailController,
                         decoration: InputDecoration(
                           enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
+                              borderSide: BorderSide(color: Colors.black),
                               borderRadius: BorderRadius.circular(40)),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(40),
@@ -143,7 +143,7 @@ class _LoginState extends State<Login> {
                         obscureText: true,
                         decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
+                              borderSide: BorderSide(color: Colors.black),
                               borderRadius: BorderRadius.circular(40),
                             ),
                             focusedBorder: OutlineInputBorder(
@@ -171,7 +171,7 @@ class _LoginState extends State<Login> {
                               style: GoogleFonts.fredoka(
                                   fontWeight: FontWeight.normal,
                                   fontSize: 15,
-                                  color: Colors.white),
+                                  color: Colors.black),
                             ),
                           ),
                         ),
@@ -187,16 +187,16 @@ class _LoginState extends State<Login> {
                           padding: EdgeInsets.symmetric(
                               vertical: 20, horizontal: 70),
                           decoration: BoxDecoration(
-                              color: Colors.grey.shade800,
+                              color: Color(0xff283048),
                               boxShadow: [
                                 BoxShadow(
-                                    color: Colors.black45,
-                                    offset: Offset(3, 9),
+                                    color: Colors.white,
+                                    offset: Offset(3, 3),
                                     blurRadius: 8,
                                     spreadRadius:-3),
                                 BoxShadow(
-                                    color: Colors.grey.shade600,
-                                    offset: Offset(-2, -4),
+                                    color: Colors.grey.shade100,
+                                    offset: Offset(-2, -2),
                                     blurRadius: 10,
                                     spreadRadius: -7)
                               ],

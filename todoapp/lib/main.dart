@@ -3,7 +3,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-
 import 'first_page.dart';
 import 'package:flutter/services.dart';
 
@@ -16,9 +15,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-    ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),

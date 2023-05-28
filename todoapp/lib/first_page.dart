@@ -123,13 +123,16 @@ class _FirstState extends State<First> {
               height: 30,
             ),
 
-            //-------------login button-------------
-            Text(
-              "Login",
-              style: GoogleFonts.montserrat(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
+            //------------------------------login button------------------------------------
+            InkWell(
+              onTap: openLoginPage,
+              child: Text(
+                "Login",
+                style: GoogleFonts.montserrat(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
+              ),
             )
           ],
         ),
@@ -138,7 +141,7 @@ class _FirstState extends State<First> {
     );
   }
 
-  //----------------creating crousel view--------------
+  //----------------------------------creating crousel view-----------------------------------
   Widget carouselView(int index) {
     return carouselCard(dataList[index]);
   }
